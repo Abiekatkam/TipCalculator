@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <img src="./images/logo.svg" alt="logo" class="logo" />
+      <div class="content">
+        <div class="billData">
+          <div class="billInput bills">
+            <p>bill</p>
+            <div class="input-group border-0">
+              <span class="input-group-text" id="basic-addon1"
+                ><img src="./images/icon-dollar.svg" alt="dollar"
+              /></span>
+              <input
+                type="text"
+                id="amountData"
+                value=""
+                class="form-control"
+                placeholder="0"
+                aria-label="0"
+                aria-describedby="basic-addon1"
+                onkeyup="tipCalc()"
+              />
+            </div>
+          </div>
+          <div class="bills">
+            <p>Select Tip %</p>
+            <div class="buttonDisplay">
+              <input type="button" class="discount" value="5%" id="tip5" />
+              <input type="button" class="discount" value="10%" id="tip10" />
+              <input type="button" class="discount" value="15%" id="tip15" />
+              <input type="button" class="discount" value="25%" id="tip25" />
+              <input type="button" class="discount" value="50%" id="tip50" />
+              <input
+                type="text"
+                class="discount custom"
+                placeholder="Custom"
+                id="tipCustom"
+              />
+            </div>
+          </div>
+          <div>
+            <div class="bills">
+              <p>number of people</p>
+            </div>
+            <div class="input-group border-0">
+              <span class="input-group-text" id="basic-addon2"
+                ><img src="./images/icon-person.svg" alt="person"
+              /></span>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="0"
+                aria-label="0"
+                aria-describedby="basic-addon2"
+                id="person"
+                value=""
+                onkeyup="tipCalc()"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="billDisplay">
+          <div class="Total">
+            <div class="billTotal">
+              <div class="titles">
+                <p class="title">Tip amount</p>
+                <p class="texted">/ person</p>
+              </div>
+              <h1 id="data1">$0.00</h1>
+            </div>
+            <div class="billTotal">
+              <div class="titles">
+                <p class="title">Total</p>
+                <p class="texted">/ person</p>
+              </div>
+              <h1 id="data2">$0.00</h1>
+            </div>
+          </div>
+          <button class="reset" id="reset">Reset</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
